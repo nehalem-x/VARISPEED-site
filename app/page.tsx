@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowDown, ArrowRight } from 'lucide-react';
 import { LibraryGraph } from './components/library-graph';
 import { LiquidDots } from './components/liquid-dots';
 
@@ -7,7 +7,7 @@ const GITHUB_URL = 'https://github.com/nehalem-x/VARISPEED';
 const MARQUEE_FACTS = [
   {
     direction: 'right',
-    items: ['25–400% DE VELOCIDADE', 'PITCH E TEMPO SE MOVEM JUNTOS', 'VARISPEED'],
+    items: ['25–400% DE VELOCIDADE', 'VARISPEED', 'PITCH E TEMPO SE MOVEM JUNTOS'],
   },
   {
     direction: 'left',
@@ -34,10 +34,6 @@ export default function Home() {
           <nav aria-label="Navegação principal">
             <a href="#sistema">Sistema</a>
             <a href="#biblioteca">Biblioteca</a>
-            <a className="nav-github" href={GITHUB_URL} target="_blank" rel="noreferrer">
-              GitHub
-              <ArrowUpRight aria-hidden="true" />
-            </a>
           </nav>
         </header>
 
@@ -116,8 +112,36 @@ export default function Home() {
             <div className="numbers-track">
               {[0, 1].map((copy) => (
                 <div className="numbers-group" key={copy}>
-                  {row.items.map((item) => (
-                    <span key={item}>{item}</span>
+                  {row.items.map((item, itemIndex) => (
+                    <span
+                      className={item === 'VARISPEED' ? 'numbers-brand-word' : item === 'FORMAS DE ORGANIZAR ∞' ? 'numbers-infinity-word' : undefined}
+                      key={`${item}-${itemIndex}`}
+                    >
+                      {item === 'VARISPEED' ? (
+                        <>
+                          <span className="numbers-brand-fixed">VARI</span>
+                          <span className="numbers-speed-cycle">
+                            <span className="numbers-speed-typeface numbers-speed-black">SPEED</span>
+                            <span className="numbers-speed-typeface numbers-speed-mono">SPEED</span>
+                            <span className="numbers-speed-typeface numbers-speed-serif">SPEED</span>
+                            <span className="numbers-speed-typeface numbers-speed-condensed">SPEED</span>
+                            <span className="numbers-speed-typeface numbers-speed-wide">SPEED</span>
+                            <span className="numbers-speed-typeface numbers-speed-courier">SPEED</span>
+                          </span>
+                        </>
+                      ) : item === 'FORMAS DE ORGANIZAR ∞' ? (
+                        <>
+                          <span>FORMAS DE ORGANIZAR</span>
+                          <span className="numbers-infinity-cycle">
+                            <span className="numbers-infinity-typeface numbers-infinity-symbol">∞</span>
+                            <span className="numbers-infinity-typeface numbers-infinity-georgia">∞</span>
+                            <span className="numbers-infinity-typeface numbers-infinity-times">∞</span>
+                            <span className="numbers-infinity-typeface numbers-infinity-math">∞</span>
+                            <span className="numbers-infinity-typeface numbers-infinity-courier">∞</span>
+                          </span>
+                        </>
+                      ) : item}
+                    </span>
                   ))}
                 </div>
               ))}
