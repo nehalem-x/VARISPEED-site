@@ -1,21 +1,22 @@
-# VARISPEED — presentation site
+# VARISPEED — site de apresentação
 
-Standalone presentation website for
-[nehalem-x/VARISPEED](https://github.com/nehalem-x/VARISPEED). It can be cloned
-independently or kept in the `website/` directory of the main project. The
-repository contains no deployment configuration and runs locally by default.
+Site de apresentação independente do
+[nehalem-x/VARISPEED](https://github.com/nehalem-x/VARISPEED). Ele pode ser
+clonado separadamente ou mantido na pasta `website/` do projeto principal. O
+repositório não possui configuração de publicação e, por padrão, funciona
+localmente.
 
-## Development
+## Desenvolvimento
 
 ```bash
 npm ci
 npm run dev
 ```
 
-Open the local address printed by the development server (normally
+Abra o endereço local exibido pelo servidor de desenvolvimento (normalmente
 `http://localhost:3000`).
 
-Quality checks:
+Verificações de qualidade:
 
 ```bash
 npm run lint
@@ -24,6 +25,6 @@ npm run build
 npm audit --omit=dev
 ```
 
-The interactive graph reuses the production `GraphEngine` from VARISPEED. The
-hero particle field is a local Three.js shader and respects reduced-motion and
-page visibility preferences.
+O grafo interativo reutiliza o `GraphEngine` de produção do VARISPEED. O campo
+de partículas da seção principal usa um shader local em Three.js e respeita as
+preferências de movimento reduzido e de visibilidade da página.
