@@ -1,7 +1,9 @@
 # VARISPEED — presentation site
 
-Local presentation website for [nehalem-x/VARISPEED](https://github.com/nehalem-x/VARISPEED).
-It is kept inside the main project and has no deployment configuration.
+Standalone presentation website for
+[nehalem-x/VARISPEED](https://github.com/nehalem-x/VARISPEED). It can be cloned
+independently or kept in the `website/` directory of the main project. The
+repository contains no deployment configuration and runs locally by default.
 
 ## Development
 
