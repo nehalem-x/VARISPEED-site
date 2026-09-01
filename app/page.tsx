@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowRight } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 import { LibraryGraph } from './components/library-graph';
 import { LiquidDots } from './components/liquid-dots';
 
@@ -43,12 +43,8 @@ export default function Home() {
             memória — faixa por faixa, conexão por conexão.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href={GITHUB_URL} target="_blank" rel="noreferrer">
-              Conhecer o projeto
-              <ArrowRight aria-hidden="true" />
-            </a>
-            <a className="button button-quiet" href="#sistema">
-              Explorar
+            <a className="button button-primary" href="#conhecer">
+              Explorar o VARISPEED
               <ArrowDown aria-hidden="true" />
             </a>
           </div>
@@ -228,7 +224,7 @@ export default function Home() {
               </a>
               <span className="footer-credit-separator" aria-hidden="true">•</span>
               <a className="footer-credit-ytdlp" href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noreferrer" aria-label="Abrir o projeto yt-dlp no GitHub">
-                <img src="/yt-dlp-logo.png?v=20260830" alt="yt-dlp" width="38" height="15" />
+                <img src="/yt-dlp-logo.png?v=20260901" alt="yt-dlp" width="38" />
               </a>
               <span className="footer-credit-separator" aria-hidden="true">•</span>
               <span>2026</span>
